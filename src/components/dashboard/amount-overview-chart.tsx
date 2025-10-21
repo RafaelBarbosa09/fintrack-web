@@ -20,11 +20,11 @@ interface AmountOverviewChartProps {
 const chartConfig = {
   income: {
     label: "Entradas",
-    color: "hsl(142, 76%, 36%)", // Verde
+    color: "hsl(142, 76%, 36%)",
   },
   expense: {
     label: "Saídas",
-    color: "hsl(0, 84%, 60%)", // Vermelho
+    color: "hsl(0, 84%, 60%)",
   },
 } satisfies ChartConfig;
 

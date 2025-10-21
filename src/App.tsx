@@ -114,7 +114,7 @@ function App() {
   return (
     <Layout>
       <div className="flex flex-col gap-4 px-2 sm:px-0">
-        <div>
+        <div className="pt-5 pb-5">
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-sm sm:text-base text-muted-foreground">
             Visão geral das suas transações financeiras
@@ -127,7 +127,7 @@ function App() {
             title="Total de Entradas"
             value={incomeTransactions.length.toString()}
             icon={ArrowUpCircle}
-            iconColor="text-green-600"
+            iconColor="text-[var(--color-income)]"
             description={`R$ ${totalIncome.toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
             })}`}
@@ -136,7 +136,7 @@ function App() {
             title="Total de Saídas"
             value={expenseTransactions.length.toString()}
             icon={ArrowDownCircle}
-            iconColor="text-red-600"
+            iconColor="text-[var(--color-expense)]"
             description={`R$ ${totalExpense.toLocaleString("pt-BR", {
               minimumFractionDigits: 2,
             })}`}
@@ -147,7 +147,7 @@ function App() {
               minimumFractionDigits: 2,
             })}`}
             icon={DollarSign}
-            iconColor={balance >= 0 ? "text-green-600" : "text-red-600"}
+            iconColor={balance >= 0 ? "text-[var(--color-income)]" : "text-[var(--color-expense)]"}
             description={balance >= 0 ? "Positivo" : "Negativo"}
           />
           <StatsCard
